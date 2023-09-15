@@ -60,7 +60,7 @@ let makeMenuPage = () => {
     contentMenu.children[index].appendChild(document.createElement('h2')).textContent = menu[index].name;
     contentMenu.children[index].appendChild(imgElement);
     contentMenu.children[index].appendChild(document.createElement('p')).textContent = menu[index].description;
-    contentMenu.children[index].appendChild(document.createElement('p')).textContent = `$${menu[index].price}`;
+    contentMenu.children[index].appendChild(document.createElement('p')).innerHTML = `<b>$${menu[index].price}</b>`;
   }
 
   return contentMenu;
