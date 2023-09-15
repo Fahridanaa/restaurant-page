@@ -1,12 +1,14 @@
 import './style.css';
 import { makeMenuPage } from './menu.js';
+import { makeHomePage } from './home.js';
+import { makeAboutPage } from './about.js';
 
 let content = document.getElementById('content');
 let main = document.createElement('div');
 main.setAttribute('id', 'main');
 
 let makeNavBar = () => {
-  let links = ['Home', 'Menu', 'Contact'];
+  let links = ['Home', 'Menu', 'About'];
 
   let nav = document.createElement('div');
   nav.setAttribute('id', 'nav');
@@ -31,25 +33,6 @@ let makeNavBar = () => {
   return nav;
 }
 
-let makeHomePage = () => {
-    let mainContent = document.createElement('div');
-    mainContent.setAttribute('id', 'main-content');
-
-    let mainTitle = document.createElement('div');
-    mainTitle.setAttribute('id', 'main-title');
-    mainTitle.innerHTML = 'Welcome to Restaurant';
-
-    let mainSubtitle = document.createElement('div');
-    mainSubtitle.setAttribute('id', 'main-subtitle');
-    mainSubtitle.innerHTML = 'The best food in the world';
-
-    mainContent.appendChild(mainTitle);
-    mainContent.appendChild(mainSubtitle);
-
-    main.appendChild(mainContent);
-    return mainContent;
-}
-
 let makePage = (index) => {
   content.innerHTML = '';
   main.innerHTML = '';
@@ -58,8 +41,10 @@ let makePage = (index) => {
 
   if(index == 0) {
     main.appendChild(makeHomePage());
-  }else {
+  }else if(index == 1) {
     main.appendChild(makeMenuPage());
+  }else {
+    main.appendChild(makeAboutPage());
   }
 
   content.appendChild(main);

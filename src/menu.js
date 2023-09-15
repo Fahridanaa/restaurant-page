@@ -4,7 +4,7 @@ let makeMenuPage = () => {
 
   for (let index = 0; index < 6; index++) {
     contentMenu.appendChild(document.createElement('div'));
-    contentMenu.children[index].setAttribute('class', `menu ${index}`);
+    contentMenu.children[index].setAttribute('class', `card-menu ${index}`);
   }
 
   return contentMenu;
