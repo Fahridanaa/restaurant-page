@@ -52,6 +52,8 @@ body {
   font-weight: bold;
   color: #4E6E3B;
   display: flex;
+  align-items: center;
+  height: 2rem;
   gap: 5rem;
 }
 
@@ -62,10 +64,11 @@ a {
 
 a:hover {
   color: rgb(78, 110, 59, 0.8);
+  border-bottom: 2px solid rgb(78, 110, 59, 0.8);
 }
 
 #main {
-  flex: 15;
+  flex: 14;
   min-height: auto;
   background-color: #C4D7B2;
   display: flex;
