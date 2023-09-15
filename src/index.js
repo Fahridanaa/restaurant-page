@@ -3,7 +3,8 @@ import { makeMenuPage } from './menu.js';
 import { makeHomePage } from './home.js';
 import { makeAboutPage } from './about.js';
 
-let content = document.getElementById('content');
+let content = document.createElement('div');
+content.setAttribute('id', 'content');
 let main = document.createElement('div');
 main.setAttribute('id', 'main');
 
@@ -50,6 +51,7 @@ let makePage = (index) => {
   content.appendChild(main);
 };
 
+document.body.appendChild(content);
 makePage(0);
 
 

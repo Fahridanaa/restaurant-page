@@ -16,6 +16,17 @@ body {
   height: 100vh;
 }
 
+p {
+  color: #4E6E3B;
+  font-size: 1.2rem;
+}
+
+h2 {
+  color: #4E6E3B;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 #content {
   background-color: #C4D7B2;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
@@ -29,21 +40,19 @@ body {
   position: sticky;
   background-color: #E1ECC8;
   top: 0;
-  width: 100%;
   height: 4rem;
-  flex: 1;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 25px 20px;
 }
 
 #logo {
   margin-left: 20px;
   font-size: 2rem;
   font-weight: bold;
-  color: #4E6E3B;
+  color: #4e6e3b;
 }
 
 #nav-links {
@@ -68,7 +77,7 @@ a:hover {
 }
 
 #main {
-  flex: 14;
+  flex: 1;
   min-height: auto;
   background-color: #C4D7B2;
   display: flex;
@@ -107,7 +116,24 @@ a:hover {
 .card-menu {
   background-color: #F7FFE5;
   border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
   box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  text-align: center;
+  padding: 2rem;
+}
+
+.card-menu img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  border: 2px solid #2e4123;
+  border-radius: 25px;
+  transition: transform 0.5s;
+
 }
 
 .card-menu:hover {
@@ -141,7 +167,5 @@ a:hover {
 
 #about-card-content p {
   text-align: justify;
-  font-size: 1.2rem;
   line-height: 2rem;
-  color: #4E6E3B;
 }
